@@ -17,9 +17,11 @@
   },
   "homepage": "https://github.com/Mage1404/TeamMember-Generator#readme",
   "dependencies": {
+    "inquirer": "^8.2.4",
     "require": "^2.4.20"
   },
   "devDependencies": {
+    "inquirer-test": "^2.0.1",
     "jest": "^28.0.3"
   }
 }
