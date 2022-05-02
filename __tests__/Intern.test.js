@@ -2,35 +2,35 @@ const Intern = require('../lib/Intern.js');
 const Employee = require('../lib/Employee.js');
 
 test('creates a intern', () => {
-    const employee = new Employee('Emplyee1');
-    expect(employee.name).toBe('Emplyee1');
+    const employee = new Employee('Intern', 1, "email@email.com");
+    expect(employee.name).toBe('Intern');
     expect(employee.id).toEqual(expect.any(Number));
     expect(employee.email).toEqual(expect.any(String));
-    const intern = new Intern('schoolname');
+    const intern = new Intern('Intern', 1, "email@email.com", 'schoolname');
     expect(intern.school).toBe('schoolname');
 });
 
-test("gets Engineer's name", () => {
-    const intern = new Employee('Dave');
+test("gets intern's name", () => {
+    const intern = new Employee('Dave', 1, "email@email.com");
     expect(intern.getName()).toEqual(expect.stringContaining(intern.name.toString()));
 });
 
-test("gets Engineer's id", () => {
-    const intern = new Employee('Dave');
+test("gets intern's id", () => {
+    const intern = new Employee('Dave', 1, "email@email.com");
     expect(intern.getId()).toEqual(expect.any(Number));
 });
 
-test("gets Engineer's email", () => {
-    const intern = new Employee('Dave');
+test("gets intern's email", () => {
+    const intern = new Employee('Dave', 1, "email@email.com");
     expect(intern.getEmail()).toEqual(expect.stringContaining('@'));
 });
 
-test("gets Engineer's school name", () => {
-    const engineer = new Intern('schoolname');
-    expect(engineer.getSchool()).toBe('schoolname');
+test("gets intern's school name", () => {
+    const intern = new Intern('Dave', 1, "email@email.com", "schoolname");
+    expect(intern.getSchool()).toBe('schoolname');
 });
 
-test("gets Engineer's role", () => {
-    const intern = new Intern();
+test("gets intern's role", () => {
+    const intern = new Intern('Dave', 1, "email@email.com", "schoolname");
     expect(intern.getRole()).toBe('Intern');
 });
